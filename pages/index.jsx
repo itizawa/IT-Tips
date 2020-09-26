@@ -13,20 +13,28 @@ function Home({ pageProps }) {
       <SubNavber />
       <div className="container main-contents">
         <p className="module-title my-3">新着記事</p>
-        {blogs.map(blog => (
-          <React.Fragment key={blog.id}>
-            <Link href="/blogs/[id]" as={`blogs/${blog.id}`}>
-              <a>
-                <h2>{blog.title}</h2>
-              </a>
-            </Link>
-            {blog.tags.map(tag => (
-              <React.Fragment key={tag.id}>
-                <span>{tag.name}</span>
+        <div className="row">
+          <div className="col-md-9">
+            {blogs.map(blog => (
+              <React.Fragment key={blog.id}>
+                <Link href="/blogs/[id]" as={`blogs/${blog.id}`}>
+                  <a>
+                    <h2>{blog.title}</h2>
+                  </a>
+                </Link>
+                {blog.tags.map(tag => (
+                  <React.Fragment key={tag.id}>
+                    <span>{tag.name}</span>
+                  </React.Fragment>
+                ))}
               </React.Fragment>
             ))}
-          </React.Fragment>
-        ))}
+          </div>
+          <div className="col-md-3 bg-pink">
+            aaaaaaaaaa
+          </div>
+        </div>
+
       </div>
     </>
   );
