@@ -1,10 +1,15 @@
 import React from 'react';
 
+import SubNavbar from '../components/SubNavbar';
+
 function Page() {
   return (
-    <p>
-      hoge
-    </p>
+    <>
+      <SubNavbar />
+      <p>
+        hoge
+      </p>
+    </>
   );
 }
 
