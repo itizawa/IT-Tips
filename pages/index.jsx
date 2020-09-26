@@ -12,7 +12,7 @@ function Home({ pageProps }) {
     <>
       <SubNavber />
       <div className="container main-contents">
-        <p className="new-articles-title">新着記事</p>
+        <p className="module-title my-3">新着記事</p>
         {blogs.map(blog => (
           <React.Fragment key={blog.id}>
             <Link href="/blogs/[id]" as={`blogs/${blog.id}`}>

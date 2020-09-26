@@ -7,8 +7,8 @@ function Navbar() {
       <div className="container">
         <div className="mr-auto">
           <Link href="/">
-            <a className="navbar-brand">
-              IT Tips
+            <a>
+              <img alt="logo" src="/tips-logov2@2x.png" />
             </a>
           </Link>
         </div>
