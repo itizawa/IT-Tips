@@ -2,8 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 
-import Link from 'next/link';
 import SubNavber from '../components/SubNavbar';
+import BlogCard from '../components/blog/BlogCard';
 
 function Home({ pageProps }) {
   const { blogs } = pageProps;
@@ -11,27 +11,26 @@ function Home({ pageProps }) {
   return (
     <>
       <SubNavber />
-      <div className="container main-contents">
-        <p className="module-title my-3">新着記事</p>
+      <div className="container main-contents mt-5">
+        <p className="module-title">新着記事</p>
         <div className="row">
-          <div className="col-md-9">
+          <div className="col-md-8">
             {blogs.map(blog => (
-              <React.Fragment key={blog.id}>
-                <Link href="/blogs/[id]" as={`blogs/${blog.id}`}>
-                  <a>
-                    <h2>{blog.title}</h2>
-                  </a>
-                </Link>
-                {blog.tags.map(tag => (
-                  <React.Fragment key={tag.id}>
-                    <span>{tag.name}</span>
-                  </React.Fragment>
-                ))}
-              </React.Fragment>
+              <div key={blog.id} className="mb-3">
+                <BlogCard blog={blog} />
+              </div>
             ))}
           </div>
-          <div className="col-md-3 bg-pink">
-            aaaaaaaaaa
+          <div className="col-md-4">
+            <div className="card p-3 side-card">
+              <p className="side-card-title">IT Tips とは</p>
+              <img width="100%" alt="logo" src="/tips-logov2@2x.png" />
+              <p>
+                <strong>若手Webエンジニアのための情報メディア</strong>
+                <br />
+                「IT Tips」は、「20代と30代の若手Webエンジニアを応援する」をテーマに、若手Webエンジニアの活躍の様子や、最新の技術情報/Tipsを広くお届けするためのWebメディアです。
+              </p>
+            </div>
           </div>
         </div>
 

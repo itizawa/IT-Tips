@@ -8,23 +8,24 @@
 a {
   text-decoration: none;
 }
-  
+
 .container {
-  max-width: 960px;
+  max-width: 980px;
 }
-  
+
 html {
   min-height: 100vh;
   background-color: #dfdfdf;
-  
+
   @include media-breakpoint-down(sm) {
     font-size: 14px;
   }
 }
 
-body{
+body {
   background-color: #dfdfdf;
 }
-  
+
 @import './subnav.scss';
 @import './blog';
+@import './sideContents.scss';
