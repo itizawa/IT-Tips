@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
@@ -19,9 +20,15 @@ function BlogId({ pageProps }) {
     <>
       <SubNavber pageTitle={blog.title} />
       <div className="container main-contents mt-5">
-        <p className="module-title">リストに戻る</p>
+        <p className="module-title">
+          <Link href="/">
+            <a>
+              リストに戻る
+            </a>
+          </Link>
+        </p>
         <div className="row">
-          <div className="col-md-8">
+          <div className="col-md-8 mb-5">
             <div className="blog card p-4 shadow-sm">
               <span>{format(new Date(blog.createdAt), 'yyyy/MM/dd')}</span>
               <h1>{blog.title}</h1>
