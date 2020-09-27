@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import SubNavber from '../components/SubNavbar';
 import BlogCard from '../components/blog/BlogCard';
+import AboutMeCard from '../components/AboutMeCard';
 
 function Home({ pageProps }) {
   const { blogs } = pageProps;
@@ -22,15 +23,7 @@ function Home({ pageProps }) {
             ))}
           </div>
           <div className="col-md-4">
-            <div className="card p-3 side-card">
-              <p className="side-card-title">IT Tips とは</p>
-              <img width="100%" alt="logo" src="/tips-logov2@2x.png" />
-              <p>
-                <strong>若手Webエンジニアのための情報メディア</strong>
-                <br />
-                「IT Tips」は、「20代と30代の若手Webエンジニアを応援する」をテーマに、若手Webエンジニアの活躍の様子や、最新の技術情報/Tipsを広くお届けするためのWebメディアです。
-              </p>
-            </div>
+            <AboutMeCard />
           </div>
         </div>
 

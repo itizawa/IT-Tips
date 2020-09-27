@@ -3,7 +3,10 @@ import axios from 'axios';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
 
+import { format } from 'date-fns';
+
 import SubNavber from '../../components/SubNavbar';
+import AboutMeCard from '../../components/AboutMeCard';
 
 function BlogId({ pageProps }) {
   const router = useRouter();
@@ -15,14 +18,24 @@ function BlogId({ pageProps }) {
   return (
     <>
       <SubNavber pageTitle={blog.title} />
-      <div className="container">
-        <div className="blog">
-          <h1>{blog.title}</h1>
-          {blog.tags.map(tag => (
-            <span key={tag.id}>{tag.name}</span>
-          ))}
-          {/* eslint-disable-next-line react/no-danger */}
-          <div dangerouslySetInnerHTML={{ __html: `${blog.body}` }}></div>
+      <div className="container main-contents mt-5">
+        <p className="module-title">リストに戻る</p>
+        <div className="row">
+          <div className="col-md-8">
+            <div className="blog card p-4 shadow-sm">
+              <span>{format(new Date(blog.createdAt), 'yyyy/MM/dd')}</span>
+              <h1>{blog.title}</h1>
+              {blog.tags.map(tag => (
+                <span key={tag.id}>{tag.name}</span>
+              ))}
+              <img className="my-3" width="100%" height="auto" src={blog.image?.url} style={{ objectFit: 'contain' }} />
+              {/* eslint-disable-next-line react/no-danger */}
+              <div dangerouslySetInnerHTML={{ __html: `${blog.body}` }}></div>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <AboutMeCard />
+          </div>
         </div>
       </div>
     </>
