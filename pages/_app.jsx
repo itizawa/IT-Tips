@@ -1,11 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Router from 'next/router';
 import Head from 'next/head';
 
 import '../styles/global.scss';
 
 import Navbar from '../components/Navbar';
 
+import * as gtag from '../lib/gtag';
+
 function Page(pageProps) {
+
+  useEffect(() => {
+    if (!gtag.existsGaId) {
+      return;
+    }
+
+    const handleRouteChange = (path) => {
+      gtag.pageview(path);
+    };
+
+    Router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      Router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, []);
+
   return (
     <>
       <Head>

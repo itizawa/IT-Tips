@@ -12,10 +12,6 @@ function Navbar() {
             </a>
           </Link>
         </div>
-        <div className="d-flex">
-          <input className="form-control mr-2" type="search" placeholder="サイト内検索" aria-label="Search" />
-          <button className="btn btn-outline-light" type="button">Search</button>
-        </div>
       </div>
     </nav>
   );
