@@ -14,14 +14,12 @@ function BlogId({ pageProps }) {
   const { blog } = pageProps;
   return (
     <>
-      <SubNavber />
+      <SubNavber pageTitle={blog.title} />
       <div className="container">
         <div className="blog">
           <h1>{blog.title}</h1>
           {blog.tags.map(tag => (
-            <React.Fragment key={tag.id}>
-              <span>{tag.name}</span>
-            </React.Fragment>
+            <span key={tag.id}>{tag.name}</span>
           ))}
           {/* eslint-disable-next-line react/no-danger */}
           <div dangerouslySetInnerHTML={{ __html: `${blog.body}` }}></div>
