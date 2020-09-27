@@ -8,11 +8,13 @@ function BlogCard({ blog }) {
   const text = blog.body.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, '');
   return (
     <div className="card p-4 shadow-sm">
-      <div className="d-md-flex">
-        <Link href="/blogs/[id]" as={`blogs/${blog.id}`}>
-          <img role="button" width="230px" height="170px" src={blog.image?.url} style={{ objectFit: 'contain' }} />
-        </Link>
-        <div className="px-3">
+      <div className="row">
+        <div className="col-md">
+          <Link href="/blogs/[id]" as={`blogs/${blog.id}`}>
+            <img role="button" width="100%" height="auto" src={blog.image?.url} style={{ objectFit: 'contain' }} />
+          </Link>
+        </div>
+        <div className="col-md">
           <span>{format(new Date(blog.createdAt), 'yyyy/MM/dd')}</span>
           <br />
           <Link href="/blogs/[id]" as={`blogs/${blog.id}`}>
