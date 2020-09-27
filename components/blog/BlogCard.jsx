@@ -8,7 +8,7 @@ function BlogCard({ blog }) {
   const text = blog.body.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, '');
   return (
     <div className="card p-4 shadow-sm">
-      <div className="d-flex">
+      <div className="d-md-flex">
         <Link href="/blogs/[id]" as={`blogs/${blog.id}`}>
           <img role="button" width="230px" height="170px" src={blog.image?.url} style={{ objectFit: 'contain' }} />
         </Link>
