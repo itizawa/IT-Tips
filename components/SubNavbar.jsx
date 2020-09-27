@@ -27,7 +27,7 @@ function SubNavbar(props) {
 }
 
 SubNavbar.propTypes = {
-  pageTitle: PropTypes.object.isRequired,
+  pageTitle: PropTypes.string,
 };
 
 export default SubNavbar;

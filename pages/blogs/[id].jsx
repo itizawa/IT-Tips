@@ -35,7 +35,6 @@ function BlogId({ pageProps }) {
               {blog.tags.map(tag => (
                 <span key={tag.id}>{tag.name}</span>
               ))}
-              <img className="my-3" width="100%" height="auto" src={blog.image?.url} style={{ objectFit: 'contain' }} />
               {/* eslint-disable-next-line react/no-danger */}
               <div dangerouslySetInnerHTML={{ __html: `${blog.body}` }}></div>
             </div>
