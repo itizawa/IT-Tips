@@ -22,6 +22,10 @@ function BlogCard({ blog }) {
               {blog.title}
             </a>
           </Link>
+          <br />
+          {blog.tags.map(tag => (
+            <span key={tag.id}>{tag.name}</span>
+          ))}
           <p>{`${text.substr(0, 80)}...`}</p>
         </div>
       </div>

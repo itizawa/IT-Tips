@@ -22,7 +22,7 @@ function BlogId({ pageProps }) {
             <React.Fragment key={tag.id}>
               <span>{tag.name}</span>
             </React.Fragment>
-        ))}
+          ))}
           {/* eslint-disable-next-line react/no-danger */}
           <div dangerouslySetInnerHTML={{ __html: `${blog.body}` }}></div>
         </div>
