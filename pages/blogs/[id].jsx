@@ -40,7 +40,7 @@ function BlogId({ pageProps }) {
               <h1>{blog.title}</h1>
               <div>
                 {blog.tags.map(tag => (
-                  <span className="badge bg-purple rounded-pill" key={tag.id}>{tag.name}</span>
+                  <span className="badge bg-purple rounded-pill mr-2" key={tag.id}>{tag.name}</span>
                 ))}
               </div>
               {/* eslint-disable-next-line react/no-danger */}

@@ -16,7 +16,7 @@ function Home({ pageProps }) {
         <title>IT-Tips の最新記事一覧</title>
       </Head>
       <SubNavber />
-      <div className="container main-contents mt-5">
+      <div className="container main-contents mt-3">
         <p className="module-title">新着記事</p>
         <div className="row">
           <div className="col-md-8">
