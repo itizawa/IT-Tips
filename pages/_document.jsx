@@ -44,6 +44,10 @@ export default class MyDocument extends Document {
           />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@it-tips" />
+          {/* Favicon */}
+          <link rel="icon" href="/favicon/tips-favicon.svg" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/favicon/tips-favicon.svg" />
+          <link rel="icon" type="image/png" href="/favicon/tips-favicon.svg" sizes="192x192" />
         </Head>
         <body>
           <Main />
