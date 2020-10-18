@@ -20,7 +20,9 @@ function BlogId({ pageProps }) {
 
   return (
     <>
-      <Head>
+      <Head
+        title="タイトル"
+      >
         <meta property="og:type" content="article" />
       </Head>
       <SubNavber pageTitle={blog.title} />
@@ -37,9 +39,11 @@ function BlogId({ pageProps }) {
             <div className="blog card p-4 shadow-sm">
               <span>{format(new Date(blog.createdAt), 'yyyy/MM/dd')}</span>
               <h1>{blog.title}</h1>
-              {blog.tags.map(tag => (
-                <span key={tag.id}>{tag.name}</span>
-              ))}
+              <div>
+                {blog.tags.map(tag => (
+                  <span className="badge bg-purple rounded-pill" key={tag.id}>{tag.name}</span>
+                ))}
+              </div>
               {/* eslint-disable-next-line react/no-danger */}
               <div dangerouslySetInnerHTML={{ __html: `${blog.body}` }}></div>
             </div>
