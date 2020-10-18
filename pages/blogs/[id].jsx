@@ -20,9 +20,8 @@ function BlogId({ pageProps }) {
 
   return (
     <>
-      <Head
-        title="タイトル"
-      >
+      <Head>
+        <title>{blog.title}</title>
         <meta property="og:type" content="article" />
       </Head>
       <SubNavber pageTitle={blog.title} />

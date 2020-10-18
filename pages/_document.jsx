@@ -16,6 +16,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="ja">
         <Head>
+          <title>IT-Tips</title>
           <meta charSet="utf-8" />
           {/* Google Analytics */}
           {existsGaId ? (
