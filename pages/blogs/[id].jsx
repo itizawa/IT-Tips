@@ -38,7 +38,7 @@ function BlogId({ pageProps }) {
         <div className="row">
           <div className="col-md-8 mb-5">
             <div className="blog card p-4 shadow-sm">
-              <small>投稿日：{format(new Date(blog.createdAt), 'yyyy/MM/dd dd:hh:ss')}</small>
+              <small>最終更新日：{format(new Date(blog.updatedAt), 'yyyy/MM/dd dd:hh:ss')}</small>
               <h1>{blog.title}</h1>
               <div>
                 {blog.tags.map(tag => (
