@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 
 import { format } from 'date-fns';
 
-import { Head } from 'next/document';
+import Head from 'next/head';
 import SubNavber from '../../components/SubNavbar';
 import AboutMeCard from '../../components/AboutMeCard';
 
@@ -17,6 +17,7 @@ function BlogId({ pageProps }) {
   }
 
   const { blog } = pageProps;
+
   return (
     <>
       <Head>

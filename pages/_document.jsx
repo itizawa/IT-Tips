@@ -44,7 +44,6 @@ export default class MyDocument extends Document {
           />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@it-tips" />
-
         </Head>
         <body>
           <Main />
