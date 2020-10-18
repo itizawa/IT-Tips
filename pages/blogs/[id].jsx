@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 
 import { format } from 'date-fns';
 
+import { Head } from 'next/document';
 import SubNavber from '../../components/SubNavbar';
 import AboutMeCard from '../../components/AboutMeCard';
 
@@ -18,6 +19,9 @@ function BlogId({ pageProps }) {
   const { blog } = pageProps;
   return (
     <>
+      <Head>
+        <meta property="og:type" content="article" />
+      </Head>
       <SubNavber pageTitle={blog.title} />
       <div className="container main-contents mt-5">
         <p className="module-title">
