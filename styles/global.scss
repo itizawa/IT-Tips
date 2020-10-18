@@ -26,6 +26,10 @@ body {
   background-color: #dfdfdf;
 }
 
+.card {
+  border-top: #004099 4px solid;
+}
+
 @import './subnav.scss';
 @import './blog';
 @import './sideContents.scss';
