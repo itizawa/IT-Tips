@@ -17,7 +17,7 @@ function SubNavbar(props) {
           {pageTitle != null && (
             <span className="text-snow ml-2">
               {'>'}
-              <span className="ml-2">{pageTitle}</span>
+              <span className="ml-2">{`${pageTitle.substr(0, 20)}...`}</span>
             </span>
           )}
         </div>

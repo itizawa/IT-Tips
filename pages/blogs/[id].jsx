@@ -25,7 +25,7 @@ function BlogId({ pageProps }) {
         <meta property="og:type" content="article" />
       </Head>
       <SubNavber pageTitle={blog.title} />
-      <div className="container main-contents mt-5">
+      <div className="container main-contents mt-3">
         <p className="module-title">
           <Link href="/">
             <a>
