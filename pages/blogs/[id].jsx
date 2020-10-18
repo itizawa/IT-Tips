@@ -36,13 +36,14 @@ function BlogId({ pageProps }) {
         <div className="row">
           <div className="col-md-8 mb-5">
             <div className="blog card p-4 shadow-sm">
-              <span>{format(new Date(blog.createdAt), 'yyyy/MM/dd')}</span>
+              <small>投稿日：{format(new Date(blog.createdAt), 'yyyy/MM/dd dd:hh:ss')}</small>
               <h1>{blog.title}</h1>
               <div>
                 {blog.tags.map(tag => (
                   <span className="badge bg-purple rounded-pill mr-2" key={tag.id}>{tag.name}</span>
                 ))}
               </div>
+              <img className="my-3" width="100%" height="auto" src={blog.image?.url} style={{ objectFit: 'contain' }} />
               {/* eslint-disable-next-line react/no-danger */}
               <div dangerouslySetInnerHTML={{ __html: `${blog.body}` }}></div>
             </div>
