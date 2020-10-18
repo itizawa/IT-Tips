@@ -9,7 +9,34 @@
     width: 100%;
   }
 
-  h2 {
+  h2:first-child {
+    position: relative;
+    padding: 1.5rem 2rem;
+    font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', 'Hiragino Mincho ProN', 'HGS明朝E', 'ＭＳ Ｐ明朝', serif;
+    -webkit-box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
+  }
+
+  h2:first-child:before,
+  h2:first-child:after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    content: '';
+    background-image: -webkit-linear-gradient(315deg, #704308 0%, #ffce08 40%, #e1ce08 60%, #704308 100%);
+    background-image: linear-gradient(135deg, #704308 0%, #ffce08 40%, #e1ce08 60%, #704308 100%);
+  }
+
+  h2:first-child:before {
+    top: 0;
+  }
+
+  h2:first-child:after {
+    bottom: 0;
+  }
+
+  h2:not(:first-child) {
     position: relative;
     padding: 1rem 0.5rem;
     margin-top: 40px;
@@ -26,6 +53,25 @@
     background-image: -webkit-linear-gradient(right, #2af598 0%, #009efd 100%);
     background-image: linear-gradient(to left, #2af598 0%, #009efd 100%);
     border-radius: 3px;
+  }
+
+  h3 {
+    padding: 1rem 2rem;
+    color: #fff;
+    background: #015dac;
+    background-image: radial-gradient(#0175d5 13%, transparent 13%), radial-gradient(#0175d5 13%, transparent 13%);
+    background-position: 0 0, 25px 25px;
+    background-size: 50px 50px;
+  }
+
+  pre {
+    padding: 1em;
+    margin: 1em 0;
+    overflow-x: auto; /* ⭐ */
+    color: #fff;
+    background: #25292f;
+    border-radius: 5px;
+    -webkit-overflow-scrolling: touch; /* ⭐ */
   }
 }
 
