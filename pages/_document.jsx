@@ -42,8 +42,7 @@ export default class MyDocument extends Document {
             property="og:description"
             content="「IT Tips」は、「20代と30代の若手社会人のIT知識を底上げする」をテーマに、管理人の実務経験を通じて獲得した知見や最新の技術情報/Tipsを広くお届けするためのWebメディアです。"
           />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:site" content="@it-tips" />
+          <meta name="twitter:site" content="@IT_Tips_dev" />
           {/* Favicon */}
           <link rel="icon" href="/favicon/tips-favicon.svg" />
           <link rel="apple-touch-icon" sizes="180x180" href="/favicon/tips-favicon.svg" />
