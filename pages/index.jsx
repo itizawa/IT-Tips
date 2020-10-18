@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import Head from 'next/head';
 
 import SubNavber from '../components/SubNavbar';
 import BlogCard from '../components/blog/BlogCard';
@@ -11,6 +12,9 @@ function Home({ pageProps }) {
 
   return (
     <>
+      <Head>
+        <title>IT-Tips の最新記事一覧</title>
+      </Head>
       <SubNavber />
       <div className="container main-contents mt-5">
         <p className="module-title">新着記事</p>

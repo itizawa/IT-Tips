@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 
 import { format } from 'date-fns';
 
+import Head from 'next/head';
 import SubNavber from '../../components/SubNavbar';
 import AboutMeCard from '../../components/AboutMeCard';
 
@@ -16,8 +17,13 @@ function BlogId({ pageProps }) {
   }
 
   const { blog } = pageProps;
+
   return (
     <>
+      <Head>
+        <title>{blog.title}</title>
+        <meta property="og:type" content="article" />
+      </Head>
       <SubNavber pageTitle={blog.title} />
       <div className="container main-contents mt-5">
         <p className="module-title">
@@ -32,9 +38,11 @@ function BlogId({ pageProps }) {
             <div className="blog card p-4 shadow-sm">
               <span>{format(new Date(blog.createdAt), 'yyyy/MM/dd')}</span>
               <h1>{blog.title}</h1>
-              {blog.tags.map(tag => (
-                <span key={tag.id}>{tag.name}</span>
-              ))}
+              <div>
+                {blog.tags.map(tag => (
+                  <span className="badge bg-purple rounded-pill" key={tag.id}>{tag.name}</span>
+                ))}
+              </div>
               {/* eslint-disable-next-line react/no-danger */}
               <div dangerouslySetInnerHTML={{ __html: `${blog.body}` }}></div>
             </div>
