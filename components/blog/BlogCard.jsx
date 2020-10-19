@@ -15,11 +15,7 @@ function BlogCard({ blog }) {
         </div>
       </div>
       <div className="col-md">
-        <div className="d-md-flex">
-          <small className="mr-3">記事投稿日：{format(new Date(blog.publishedAt), 'yyyy/MM/dd hh:ss')} </small>
-          <br className="d-md-none d-block" />
-          <small>最終更新日：{format(new Date(blog.updatedAt), 'yyyy/MM/dd hh:ss')}</small>
-        </div>
+        <small className="mr-3">記事投稿日：{format(new Date(blog.publishedAt), 'yyyy/MM/dd hh:ss')} </small>
         <Link href="/blogs/[id]" as={`blogs/${blog.id}`}>
           <a className="tips-card-title">
             {blog.title}
