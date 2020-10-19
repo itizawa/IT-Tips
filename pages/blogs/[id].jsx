@@ -38,11 +38,13 @@ function BlogId({ pageProps }) {
         <div className="row">
           <div className="col-md-8 mb-5">
             <div className="blog card p-4 shadow-sm">
-              <div className="d-flex">
-                <small className="mr-3">記事投稿日：{format(new Date(blog.publishedAt), 'yyyy/MM/dd hh:ss')} </small>
+              <small>
+                <span className="mr-3">
+                  記事投稿日：{format(new Date(blog.publishedAt), 'yyyy/MM/dd hh:ss')}
+                </span>
                 <br className="d-md-none d-block" />
-                <small>最終更新日：{format(new Date(blog.updatedAt), 'yyyy/MM/dd hh:ss')}</small>
-              </div>
+                最終更新日：{format(new Date(blog.updatedAt), 'yyyy/MM/dd hh:ss')}
+              </small>
               <h1>{blog.title}</h1>
               <div>
                 {blog.tags.map(tag => (
