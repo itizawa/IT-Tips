@@ -19,14 +19,14 @@ function Home({ pageProps }) {
       <div className="container main-contents mt-3">
         <p className="module-title">新着記事</p>
         <div className="row">
-          <div className="col-md-8">
+          <div className="col-lg-8">
             {blogs.map(blog => (
               <div key={blog.id} className="mb-3">
                 <BlogCard blog={blog} />
               </div>
             ))}
           </div>
-          <div className="col-md-4">
+          <div className="col-lg-4">
             <AboutMeCard />
           </div>
         </div>

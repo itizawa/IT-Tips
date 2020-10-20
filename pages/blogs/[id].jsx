@@ -36,7 +36,7 @@ function BlogId({ pageProps }) {
           </Link>
         </p>
         <div className="row">
-          <div className="col-md-8 mb-5">
+          <div className="col-lg-8 mb-5">
             <div className="blog card p-4 shadow-sm">
               <small>
                 <span className="mr-3">
@@ -56,7 +56,7 @@ function BlogId({ pageProps }) {
               <div dangerouslySetInnerHTML={{ __html: `${blog.body}` }}></div>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-lg-4">
             <AboutMeCard />
           </div>
         </div>
