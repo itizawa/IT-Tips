@@ -25,6 +25,7 @@ function BlogId({ pageProps }) {
         <meta property="og:image" content={blog.image?.url} />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="description" content={blog.title} />
       </Head>
       <SubNavber pageTitle={blog.title} />
       <div className="container main-contents mt-3">
