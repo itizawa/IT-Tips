@@ -25,7 +25,9 @@ function BlogId({ pageProps }) {
         <meta property="og:image" content={blog.image?.url} />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="description" content={blog.title} />
+        <meta name="description" content={`${blog.body.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'').substr(0,120)}...`}  />
+        <meta name="og:title" content={blog.title} />
+        <meta name="og:description" content={`${blog.body.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'').substr(0,120)}...`} />
       </Head>
       <SubNavber pageTitle={blog.title} />
       <div className="container main-contents mt-3">
