@@ -54,7 +54,7 @@ function BlogId({ pageProps }) {
                   <span className="badge bg-purple rounded-pill mr-2" key={tag.id}>{tag.name}</span>
                 ))}
               </div>
-              <img className="my-3" width="100%" height="auto" src={blog.image?.url} style={{ objectFit: 'contain' }} />
+              <img className="my-3" width="100%" height="auto" alt={blog.title} src={blog.image?.url} style={{ objectFit: 'contain' }} />
               {/* eslint-disable-next-line react/no-danger */}
               <div dangerouslySetInnerHTML={{ __html: `${blog.body}` }}></div>
             </div>

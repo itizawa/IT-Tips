@@ -10,7 +10,7 @@ function BlogCard({ blog }) {
       <div className="row">
         <div className="col-md">
           <Link href="/blogs/[id]" as={`blogs/${blog.id}`}>
-            <img role="button" width="100%" height="auto" src={blog.image?.url} style={{ objectFit: 'contain' }} />
+            <img role="button" width="100%" height="auto" src={blog.image?.url} alt={blog.title} style={{ objectFit: 'contain' }} />
           </Link>
         </div>
       </div>

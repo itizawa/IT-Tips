@@ -8,7 +8,7 @@ function Navbar() {
         <div className="mx-auto">
           <Link href="/">
             <a>
-              <img alt="logo" src="/tips-logov2@2x.png" />
+              <img alt="it-tips-logo" src="/tips-logov2@2x.png" />
             </a>
           </Link>
         </div>

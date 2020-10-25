@@ -4,7 +4,7 @@ function AboutMeCard() {
   return (
     <div className="card p-3 side-card">
       <p className="side-card-title">IT Tips とは</p>
-      <img width="100%" alt="logo" src="/tips-logov2@2x.png" />
+      <img width="100%" alt="it-tips-logo" src="/tips-logov2@2x.png" />
       <p className="text-center">
         <strong className="text-center">若手社会人のためのIT情報専門メディア</strong>
       </p>
