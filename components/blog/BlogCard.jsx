@@ -15,7 +15,7 @@ function BlogCard({ blog }) {
         </div>
       </div>
       <div className="col-md">
-        <p>
+        <p className="mb-0">
           <small className="mr-3">記事投稿日：{format(new Date(blog.publishedAt), 'yyyy/MM/dd hh:ss')} </small>
         </p>
         <Link href="/blogs/[id]" as={`blogs/${blog.id}`}>

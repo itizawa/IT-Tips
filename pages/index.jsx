@@ -14,7 +14,7 @@ function Home({ pageProps }) {
     <>
       <Head>
         <title>IT-Tips の最新記事一覧</title>
-        <meta name="description" content="IT-Tips の最新記事一覧 「IT Tips」は、「若手社会人のIT知識を底上げする」をテーマに、管理人の実務経験を通じて獲得した知見や最新の技術情報/Tipsを広くお届けするためのWebメディアです。" />
+        <meta name="description" content="IT-Tips の最新記事一覧:「IT Tips」は、「若手社会人のIT知識を底上げする」をテーマに、管理人の実務経験を通じて獲得した知見や最新の技術情報/Tipsを広くお届けするためのWebメディアです。" />
       </Head>
       <SubNavber />
       <div className="container main-contents mt-3">
