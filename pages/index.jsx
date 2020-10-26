@@ -43,7 +43,7 @@ export const getStaticProps = async() => {
     data: {},
   };
   const res = await axios.get(
-    'https://itizawa.microcms.io/api/v1/blogs',
+    'https://itizawa.microcms.io/api/v1/blogs?orders=-publishedAt',
     key,
   );
 
