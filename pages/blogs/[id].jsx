@@ -30,14 +30,7 @@ function BlogId({ pageProps }) {
         <meta name="og:description" content={`${blog.body.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'').substr(0,120)}...`} />
       </Head>
       <SubNavber pageTitle={blog.title} />
-      <div className="md-container main-contents mt-3">
-        <p className="module-title">
-          <Link href="/">
-            <a>
-              リストに戻る
-            </a>
-          </Link>
-        </p>
+      <div className="container-md main-contents mt-3 px-0">
         <div className="row">
           <div className="col-lg-8 mb-5">
             <div className="blog card p-md-4 p-3 shadow-sm">
