@@ -30,7 +30,7 @@ function BlogId({ pageProps }) {
         <meta name="og:description" content={`${blog.body.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'').substr(0,120)}...`} />
       </Head>
       <SubNavber pageTitle={blog.title} />
-      <div className="container main-contents mt-3">
+      <div className="md-container main-contents mt-3">
         <p className="module-title">
           <Link href="/">
             <a>
@@ -40,7 +40,7 @@ function BlogId({ pageProps }) {
         </p>
         <div className="row">
           <div className="col-lg-8 mb-5">
-            <div className="blog card p-4 shadow-sm">
+            <div className="blog card p-md-4 p-3 shadow-sm">
               <small>
                 <span className="mr-3">
                   記事投稿日：{format(new Date(blog.publishedAt), 'yyyy/MM/dd hh:ss')}
