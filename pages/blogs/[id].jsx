@@ -31,8 +31,8 @@ function BlogId({ pageProps }) {
       </Head>
       <SubNavber pageTitle={blog.title} />
       <div className="container-md main-contents mt-3 px-0">
-        <div className="row">
-          <div className="col-lg-8 mb-5">
+        <div className="row mx-0">
+          <div className="col-lg-8 mb-5 px-0">
             <div className="blog card p-md-4 p-3 shadow-sm">
               <small>
                 <span className="mr-3">
