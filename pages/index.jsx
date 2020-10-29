@@ -30,7 +30,6 @@ function Home({ pageProps }) {
             <AboutMeCard />
           </div>
         </div>
-
       </div>
     </>
   );
