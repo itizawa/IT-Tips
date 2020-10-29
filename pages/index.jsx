@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
+import Link from 'next/link';
 
 import SubNavber from '../components/SubNavbar';
 import BlogCard from '../components/blog/BlogCard';
@@ -25,6 +26,13 @@ function Home({ pageProps }) {
                 <BlogCard blog={blog} />
               </div>
             ))}
+            <div className="d-flex mb-5">
+              <Link href="/archive/10">
+                <button type="button" className="btn btn-info text-snow ml-auto">
+                  次のページ
+                </button>
+              </Link>
+            </div>
           </div>
           <div className="col-lg-4">
             <AboutMeCard />

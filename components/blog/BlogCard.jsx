@@ -9,7 +9,7 @@ function BlogCard({ blog }) {
     <div className="card p-4 shadow-sm">
       <div className="row">
         <div className="col-md">
-          <Link href="/blogs/[id]" as={`blogs/${blog.id}`}>
+          <Link href={`/blogs/${blog.id}`}>
             <img role="button" width="100%" height="auto" src={blog.image?.url} alt={blog.title} style={{ objectFit: 'contain' }} />
           </Link>
         </div>
@@ -18,7 +18,7 @@ function BlogCard({ blog }) {
         <p className="mb-0">
           <small className="mr-3">記事投稿日：{format(new Date(blog.publishedAt), 'yyyy/MM/dd hh:ss')} </small>
         </p>
-        <Link href="/blogs/[id]" as={`blogs/${blog.id}`}>
+        <Link href={`/blogs/${blog.id}`}>
           <a className="tips-card-title">
             {blog.title}
           </a>
