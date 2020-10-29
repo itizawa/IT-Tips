@@ -66,7 +66,7 @@ export const getStaticPaths = async() => {
     data: {},
   };
 
-  const res = await axios.get('https://itizawa.microcms.io/api/v1/blogs', key);
+  const res = await axios.get('https://itizawa.microcms.io/api/v1/blogs?limit=1000', key);
   const repos = await res.data;
 
   const paths = repos.contents.map(repo => `/blogs/${repo.id}`);
