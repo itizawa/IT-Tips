@@ -5,11 +5,10 @@ const generateSitemap = (posts) => {
   const location = 'https://it-tips.tech/blogs/';
 
   posts.forEach((post) => {
-    const { publishedAt, id } = post;
+    const { id } = post;
     // YYYY-MM-DD
     xml += `<url>
           <loc>${location}${id}</loc>
-          <lastmod>${publishedAt}</lastmod>
           <priority>0.50</priority>
         </url>`;
   });
