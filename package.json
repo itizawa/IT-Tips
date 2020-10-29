@@ -13,7 +13,6 @@
     "lint:styles:fix": "stylelint --fix styles/**/*.scss",
     "lint:styles": "stylelint styles/**/*.scss",
     "lint": "npm-run-all -p lint:js lint:styles",
-    "postexport": "node ./postexport.js"
   },
   "dependencies": {
     "axios": "^0.20.0",
