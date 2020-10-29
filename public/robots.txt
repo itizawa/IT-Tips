@@ -1,0 +1,4 @@
+Sitemap: http://it-tips.tech/api/sitemap
+User-agent: *
+Allow: /*
+Disallow: /api/*
